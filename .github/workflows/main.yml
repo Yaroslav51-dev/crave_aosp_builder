@@ -27,6 +27,7 @@ on:
           - 'LineageOS 16.0'
           - 'CyanogenMOD 14.1'
           - 'AOSP'
+          - 'AOSPA'
       BUILD_DIFFERENT_ROM:
         description: "Command to initialize a different 'repo' project:"
         required: false
@@ -147,6 +148,11 @@ jobs:
           export PROJECTFOLDER="/crave-devspaces/AOSP"
           export PROJECTID="35"
           export REPO_INIT="repo init -u https://android.googlesource.com/platform/manifest.git -b master --git-lfs --depth=1"
+        ;;
+        "AOSPA")
+          export PROJECTFOLDER="/crave-devspaces/AOSP"
+          export PROJECTID="35"
+          export REPO_INIT="repo init -u https://github.com/Rv-Trees/manifest -b topaz --git-lfs --depth=1"
         ;;
         esac
 
@@ -464,8 +470,7 @@ jobs:
 
         # Build the ROM
         $LUNCH && \
-        make installclean && \
-        ${{ github.event.inputs.BUILD_COMMAND }}"
+        ./rom-build.sh liuqin"
 
       # Send Build 'status' notification (Success)
     - name: Telegram Notification
