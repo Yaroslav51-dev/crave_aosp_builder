@@ -147,12 +147,7 @@ jobs:
         "AOSP")
           export PROJECTFOLDER="/crave-devspaces/AOSP"
           export PROJECTID="35"
-          export REPO_INIT="repo init -u https://github.com/SomethingOS/manifest -b topaz --depth=1"
-        ;;
-        "AOSPA")
-          export PROJECTFOLDER="/crave-devspaces/AOSP"
-          export PROJECTID="35"
-          export REPO_INIT="repo init -u https://github.com/Rv-Trees/manifest -b topaz --git-lfs --depth=1"
+          export REPO_INIT="repo init -u https://github.com/SomethingOS/manifest -b uvite --depth=1"
         ;;
         esac
 
