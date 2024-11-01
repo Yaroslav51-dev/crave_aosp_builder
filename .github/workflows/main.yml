@@ -470,7 +470,8 @@ jobs:
 
         # Build the ROM
         $LUNCH && \
-        ./rom-build.sh liuqin"
+        make installclean && \
+        ${{ github.event.inputs.BUILD_COMMAND }}"
 
       # Send Build 'status' notification (Success)
     - name: Telegram Notification
