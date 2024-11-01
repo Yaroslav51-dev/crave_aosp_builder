@@ -147,7 +147,7 @@ jobs:
         "AOSP")
           export PROJECTFOLDER="/crave-devspaces/AOSP"
           export PROJECTID="35"
-          export REPO_INIT="repo init -u https://github.com/CalyxOS/platform_manifest.git -b android13 --git-lfs --depth=1"
+          export REPO_INIT="repo init -u https://github.com/AOSPA/manifest -b topaz --depth=1"
         ;;
         "AOSPA")
           export PROJECTFOLDER="/crave-devspaces/AOSP"
